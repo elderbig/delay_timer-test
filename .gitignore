@@ -1,0 +1,6 @@
+target/
+debug/
+logs/
+Cargo.lock
+**/*.rs.bk
+*.pdb
