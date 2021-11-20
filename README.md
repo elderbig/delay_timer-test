@@ -1,5 +1,5 @@
 # delay_timer-test
-test for crate delay_timer
+some test for crate delay_timer
 crate link:
 
 https://github.com/BinChengZhao/delay-timer
