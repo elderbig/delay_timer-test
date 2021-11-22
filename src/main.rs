@@ -27,15 +27,13 @@ async fn main() -> Result<()>{
         }
     }
     info!("==== All job is be init! ====");
-    for _ in 0..120 {
-        thread::sleep(Duration::from_secs(60));
-    }
+    thread::sleep(Duration::from_secs(3600*6));
     Ok(delay_timer.stop_delay_timer()?)
 }
 
 fn build_task_async_execute_process(task_id:u64) -> Result<Task, TaskError> {
     let mut task_builder = TaskBuilder::default();
-    let cmd_string = String::from("sh test.sh");
+    let cmd_string = String::from("sh tester/test_script.sh");
     info!("cmd_string = [{}]", &cmd_string);
     let body = dt_functions::unblock_process_task_fn(cmd_string);
     task_builder
